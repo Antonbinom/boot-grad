@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, p {
 
 body {
   font-family: 'Rubik', sans-serif;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1;
   color: #3D495B;
@@ -31,7 +32,7 @@ a {
   width: 100%;
   max-width: 1790px;
   margin: auto;
-  padding: 0 60px;
+  padding: 0 15px;
 }
 
 .button {
@@ -518,18 +519,18 @@ template {
 
 .main__info {
   margin-top: calc(32px + 80 * (100vw / 1920));
-  width: 45%;
+  width: 56%;
 }
 
 .main-title {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: calc(8px + 16 * (100vw / 1920));
   font-size: calc(38px + 58 * (100vw / 1920));
   font-weight: 700;
 }
 
 .main-subtitle {
-  margin-bottom: 32px;
+  margin-bottom: calc(16px + 16 * (100vw / 1920));
   font-weight: 500;
   font-size: calc(28px + 26 * (100vw / 1920));
 }
@@ -547,8 +548,14 @@ template {
   right: 0;
 }
 
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .main-button {
-  margin-top: 47px;
+  margin-top: calc(20px + 27 * (100vw / 1920));
 }
 
 @media (max-width: 1400px) {
@@ -580,6 +587,25 @@ template {
   .header__burger-menu--visible {
     display: block;
   }
+  .main__info {
+    margin-top: calc(32px + 40 * (100vw / 1920));
+    width: 40%;
+  }
+  .main-title {
+    font-size: calc(35px + 40 * (100vw / 1920));
+  }
+  .main-subtitle {
+    font-size: calc(24px + 20 * (100vw / 1920));
+  }
+  .main-text {
+    font-size: calc(15px + 3 * (100vw / 1920));
+  }
+  .main-image {
+    width: 52%;
+  }
+  .main-button {
+    margin-top: calc(16px + 24 * (100vw / 1920));
+  }
   .burger-button {
     display: flex;
   }
@@ -594,6 +620,33 @@ template {
   }
   .button:hover {
     background-color: #9B131D;
+  }
+}
+
+@media (max-width: 991px) {
+  .main__wrapper {
+    flex-direction: column;
+  }
+  .main__info {
+    width: auto;
+    margin-top: calc(32px + 40 * (100vw / 1920));
+    margin-bottom: 50px;
+  }
+  .main-title {
+    font-size: calc(35px + 40 * (100vw / 1920));
+  }
+  .main-subtitle {
+    font-size: calc(24px + 20 * (100vw / 1920));
+  }
+  .main-text {
+    font-size: calc(15px + 3 * (100vw / 1920));
+  }
+  .main-image {
+    position: static;
+    width: auto;
+  }
+  .main-button {
+    margin-top: calc(16px + 24 * (100vw / 1920));
   }
 }
 
