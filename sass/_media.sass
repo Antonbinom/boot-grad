@@ -1,28 +1,42 @@
 @media (max-width: 1400px)
 	.header
+		&__logo
+			&-name
+				font-size: 16px
+			&-text
+				font-size: 14px
 		&__menu
 			margin-right: 0
 			&-item
-				& br
-					display: block
-@media (min-width: 991px)
-	.header
-		&-item
-			&:hover
-				color: $light
-	.burger-button
-		display: none
-	.button
-		transition: all 0.5s
-		&:hover
-			background-color: #9B131D
-@media (max-width: 991px)
+				font-size: 16px
+				// & br
+				// 	display: block
+			&-phone
+				font-size: 18px
+@media (max-width: 1200px)
 	.header
 		&__menu
 			display: none
 		&-phone
 			margin-left: auto
 			margin-right: 20px
+		&__burger-menu
+			&--visible
+				display: block
+	.burger-button
+		display: flex
+@media (min-width: 992px)
+	.header
+		&-item, &__burger-item
+			&:hover
+				color: $light
+	.button
+		transition: all 0.5s
+		&:hover
+			background-color: #9B131D
+@media (max-width: 991px)
+	.header
+
 @media (max-width: 768px)
 	.header
 		&-phone
@@ -33,7 +47,9 @@
 			text-align: center
 	.burger-button
 		align-self: flex-start
-
+	.main
+		&-title
+			font-size: calc(38px + (58 + 58 * 0.7) * ((100vw - 360px) / 1920))
 @media (max-width: 576px)
 	.header
 		&__logo
@@ -49,3 +65,7 @@
 				font-size: 14px
 		&-phone
 			font-size: 16px
+@media (max-width: 360px)
+	.main
+		&-title
+			font-size: 38px

@@ -28,9 +28,10 @@ a {
 }
 
 .container {
-  max-width: 1700px;
+  width: 100%;
+  max-width: 1790px;
   margin: auto;
-  padding: 0 15px;
+  padding: 0 60px;
 }
 
 .button {
@@ -472,12 +473,9 @@ template {
 }
 
 .header__burger-menu {
+  display: none;
   padding: 17px 0;
   background-color: #344053;
-}
-
-.header__burger-menu--hidden {
-  display: none;
 }
 
 .header__burger-list {
@@ -494,7 +492,7 @@ template {
 }
 
 .burger-button {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -519,29 +517,31 @@ template {
 }
 
 .main__info {
-  margin-top: 49px;
-  max-width: 940px;
+  margin-top: calc(32px + 80 * (100vw / 1920));
+  width: 45%;
 }
 
 .main-title {
+  margin: 0;
   margin-bottom: 24px;
-  font-size: 96px;
+  font-size: calc(38px + 58 * (100vw / 1920));
   font-weight: 700;
 }
 
 .main-subtitle {
   margin-bottom: 32px;
   font-weight: 500;
-  font-size: 54px;
+  font-size: calc(28px + 26 * (100vw / 1920));
 }
 
 .main-text {
   font-weight: 500;
-  font-size: 20px;
+  font-size: calc(16px + 4 * (100vw / 1920));
   line-height: 160%;
 }
 
 .main-image {
+  width: 44%;
   position: absolute;
   top: 0;
   right: 0;
@@ -552,36 +552,48 @@ template {
 }
 
 @media (max-width: 1400px) {
+  .header__logo-name {
+    font-size: 16px;
+  }
+  .header__logo-text {
+    font-size: 14px;
+  }
   .header__menu {
     margin-right: 0;
   }
-  .header__menu-item br {
-    display: block;
+  .header__menu-item {
+    font-size: 16px;
+  }
+  .header__menu-phone {
+    font-size: 18px;
   }
 }
 
-@media (min-width: 991px) {
-  .header-item:hover {
-    color: #ffffff;
-  }
-  .burger-button {
-    display: none;
-  }
-  .button {
-    transition: all 0.5s;
-  }
-  .button:hover {
-    background-color: #9B131D;
-  }
-}
-
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .header__menu {
     display: none;
   }
   .header-phone {
     margin-left: auto;
     margin-right: 20px;
+  }
+  .header__burger-menu--visible {
+    display: block;
+  }
+  .burger-button {
+    display: flex;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-item:hover, .header__burger-item:hover {
+    color: #ffffff;
+  }
+  .button {
+    transition: all 0.5s;
+  }
+  .button:hover {
+    background-color: #9B131D;
   }
 }
 
@@ -595,6 +607,9 @@ template {
   }
   .burger-button {
     align-self: flex-start;
+  }
+  .main-title {
+    font-size: calc(38px + (58 + 58 * 0.7) * ((100vw - 360px) / 1920));
   }
 }
 
@@ -614,5 +629,11 @@ template {
   }
   .header-phone {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .main-title {
+    font-size: 38px;
   }
 }
