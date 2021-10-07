@@ -1,0 +1,51 @@
+@media (max-width: 1400px)
+	.header
+		&__menu
+			margin-right: 0
+			&-item
+				& br
+					display: block
+@media (min-width: 991px)
+	.header
+		&-item
+			&:hover
+				color: $light
+	.burger-button
+		display: none
+	.button
+		transition: all 0.5s
+		&:hover
+			background-color: #9B131D
+@media (max-width: 991px)
+	.header
+		&__menu
+			display: none
+		&-phone
+			margin-left: auto
+			margin-right: 20px
+@media (max-width: 768px)
+	.header
+		&-phone
+			flex-basis: 100%
+			order: 2
+			margin-top: 14px
+			margin-left: 17px
+			text-align: center
+	.burger-button
+		align-self: flex-start
+
+@media (max-width: 576px)
+	.header
+		&__logo
+			&-info
+				margin-left: 12px
+			&-image
+				width: 40px
+				height: 41px
+			&-name
+				mb
+				font-size: 14px
+			&-text
+				font-size: 14px
+		&-phone
+			font-size: 16px

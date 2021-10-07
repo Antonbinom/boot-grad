@@ -1,22 +1,18 @@
 .header
-	padding-top: 16px
-	padding-bottom: 17px
 	background-color: $primary
 	color: $light
 	&__wrapper
 		display: flex
 		justify-content: space-between
 		align-items: center
+		flex-wrap: wrap
+		padding: 16px 0 15px
 	&__logo
 		display: flex
 		align-items: center
-		margin-right: auto
 		&-info
-			display: flex
-			flex-direction: column
 			margin-left: 16px
 		&-image
-			position: relative
 			width: 54px
 			height: 55px
 			border-radius: 4px
@@ -27,28 +23,61 @@
 				left: 50%
 				transform: translate(-50%, -50%)
 		&-name
-
+			display: inline-block
 			margin-bottom: 4px
 			font-weight: 500
 			font-size: 16px
 		&-text
 			font-weight: 300
 			font-size: 16px
-	&__nav
+	&__menu
+		margin-right: 67px
 		&-list
 			display: flex
 			list-style: none
 			padding: 0
-		&-link
+		&-item
+			text-align: center
 			font-size: 18px
-			line-height: 100%
+			line-height: 1.4
 			color: #FFD0A8
 			transition: all 0.5s
 			&:hover
 				color: $light
 			&:not(:last-child)
 				margin-right: 32px
+			& br
+				display: none
 	&-phone
-		margin-left: 349px
 		font-weight: 500
 		font-size: 20px
+	&__burger
+		&-menu
+			padding: 17px 0
+			background-color: #344053
+			&--hidden
+				display: none
+		&-list
+			padding: 0
+			list-style: none
+		&-item
+			margin-bottom: 16px
+			text-align: center
+			font-size: 18px
+			font-weight: 400
+			color: #FFD0A8
+
+.burger
+	&-button
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		width: 27px
+		height: 26px
+	&-line
+		display: block
+		width: 100%
+		height: 4px
+		border-radius: 8px
+		background-color: #fff

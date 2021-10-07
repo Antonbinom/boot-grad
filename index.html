@@ -38,40 +38,79 @@
     <div class="container">
       <div class="header__wrapper">
         <div class="header__logo">
-          <div class="header__logo-image">
-            <img src="img/logo.png" alt="Логотип">
-          </div>
+          <!-- <div class="header__logo-image"> -->
+          <img class="header__logo-image" src="img/logo.png" alt="Логотип">
+          <!-- </div> -->
           <div class="header__logo-info">
             <span class="header__logo-name">БутГрад</span>
+            <br>
             <span class="header__logo-text">Строительство из камня</span>
           </div>
           <!-- /.header__info -->
         </div>
         <!-- /.header__logo -->
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-link">
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
               <a href="#">О мастерской</a>
             </li>
-            <li class="header__nav-link">
-              <a href="#">Преимущества сотрудничества</a>
+            <li class="header__menu-item">
+              <a href="#">Преимущества <br>сотрудничества</a>
             </li>
-            <li class="header__nav-link">
-              <a href="#">Примеры работ</a>
+            <li class="header__menu-item">
+              <a href="#">Примеры <br>работ</a>
             </li>
           </ul>
         </nav>
-        <!-- /.header__nav -->
+        <!-- /.header__menu -->
         <div class="header-phone">
           <a href="tel:+79013435296">+7 (901) 343-52-96</a>
         </div>
         <!-- /.header-phone -->
+        <div class="burger-button">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </div>
+        <!-- /.burger-button -->
+      </div>
+      <!-- /.header__wrapper -->
+    </div>
+    <!-- /.container -->
+    <div class="header__burger-menu header__burger-menu--hidden">
+      <div class="container">
+        <nav class="header__burger-nav">
+          <ul class="header__burger-list">
+            <li class="header__burger-item"><a href="#">О мастерской</a></li>
+            <li class="header__burger-item"><a href="#"></a>Преимущества сотрудничества</li>
+            <li class="header__burger-item"><a href="#"></a>Примеры работ</li>
+          </ul>
+        </nav>
       </div>
     </div>
-    <!-- /.header__wrapper -->
-    <!-- /.container -->
   </div>
   <!-- /.header -->
+  <section class="main">
+    <div class="container">
+      <div class="main__wrapper">
+        <div class="main__info">
+          <h1 class="main-title">Строительство каминов</h1>
+          <h3 class="main-subtitle">из натурального камня</h3>
+          <span class="main-text">Солидность, красота и уют. Важное украшение для богатого дома!</span>
+          <button class="button main-button">Оставить заявку</button>
+        </div>
+        <!-- /.main__info -->
+        <div class="main-image">
+          <img src="img/fireplace 1.jpg" alt="Фото: Комната с камином">
+        </div>
+        <!-- /.main__image -->
+      </div>
+      <!-- /.main__wrapper -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.main -->
+  <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
