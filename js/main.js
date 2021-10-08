@@ -4,5 +4,4 @@ $(document).ready(function () {
 	burgerButton.addEventListener('click', function () {
 		document.querySelector('.header__burger-menu').classList.toggle('header__burger-menu--visible');
 	});
-
 });

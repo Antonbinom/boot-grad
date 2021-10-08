@@ -1,4 +1,16 @@
-@media (max-width: 1400px)
+@media (max-width: 1600px)
+	.container
+		max-width: 1390px
+		&-big
+			max-width: 1460px
+	.facts
+		&__main
+			margin-right: 90px
+		&__cards
+			max-width: 790px
+@media (max-width: 1440px)
+	.container, .container-big
+		max-width: 1200px
 	.header
 		&__logo
 			&-name
@@ -15,10 +27,9 @@
 		&-image
 			width: 50%
 			margin-right: 70px
-			// width: auto
 		&__info
 			margin-top: 40px
-			width: 40%
+			width: 46%
 		&-title
 			margin-bottom: 10px
 			font-size: 50px
@@ -37,7 +48,14 @@
 			font-size: 42px
 		&-text
 			font-size: 16px
+	.facts
+		&-title
+			font-size: 50px
+		&-subtitle
+			font-size: 42px
 @media (max-width: 1200px)
+	.container, .container-big
+		max-width: 992px
 	.header
 		&__menu
 			display: none
@@ -58,7 +76,7 @@
 		&-text
 			font-size: calc(15px + 3 * (100vw / 1920))
 		&-image
-			width: 52%
+			width: 48%
 		&-button
 			margin-top: calc(16px + 24 * (100vw / 1920))
 	.burger-button
@@ -75,6 +93,16 @@
 			font-size: 42px
 		&-subtitle
 			font-size: 36px
+	.facts
+		&__wrapper
+			flex-wrap: wrap
+		&__main
+			margin-bottom: 60px
+			margin-right: 0
+		&__cards
+			&-item
+				&:last-child
+					margin-top: 0
 @media (min-width: 992px)
 	.header
 		&-item, &__burger-item
@@ -85,6 +113,8 @@
 		&:hover
 			background-color: #9B131D
 @media (max-width: 991px)
+	.container, .container-big
+		max-width: 720px
 	.header
 		&__wrapper
 			padding-bottom: 17px
@@ -126,6 +156,7 @@
 			margin: 0
 			margin-bottom: 50px
 	.terms
+		padding-bottom: 50px
 		&__wrapper
 			flex-wrap: wrap
 			text-align: center
@@ -134,7 +165,20 @@
 			margin-bottom: 20px
 		&-number
 			font-size: 36px
+	.facts
+		padding-top: 50px
+		&__cards
+			&-item
+				&:not(:last-child)
+					width: 300px
+		&-title
+			font-size: 42px
+		&-subtitle
+			font-size: 36px
 @media (max-width: 768px)
+	.container, .container-big
+		max-width: 92%
+		padding: 0
 	.header
 		&-phone
 			flex-basis: 100%
@@ -149,6 +193,9 @@
 			align-items: center
 		&__info
 			width: 540px
+	.button
+		padding-top: 18px
+		padding-bottom: 17px
 @media (max-width: 576px)
 	.header
 		&__logo
@@ -165,7 +212,7 @@
 			font-size: 16px
 	.main
 		padding-top: 32px
-		padding-bottom: 24px
+		padding-bottom: 25px
 		&__info
 			max-width: 350px
 			margin-bottom: 46px
@@ -176,7 +223,7 @@
 			font-size: 28px
 			margin-bottom: 16px
 		&-button
-			margin-top: 19px
+			margin-top: 21px
 			font-size: 14px
 	.about
 		padding: 20px 0 16px
@@ -188,7 +235,8 @@
 			font-size: 26px
 			width: auto
 	.terms
-		padding-top: 13px
+		padding-top: 12px
+		padding-bottom: 0
 		&__wrapper
 			text-align: start
 		&-item
@@ -201,11 +249,35 @@
 			font-size: 18px
 			& br
 				display: none
+	.facts
+		padding-top: 18px
+		padding-bottom: 24px
+		&__main
+			margin-bottom: 17px
+		&-title
+			margin-bottom: 8px
+			font-size: 32px
+		&-subtitle
+			font-size: 26px
+		&__bottom
+			display: none
+		&__cards
+			&-item
+				&:not(:first-child)
+					display: none
+			&-title
+				margin-bottom: 12px
+				font-size: 16px
 @media (max-width: 360px)
 	.about
 		&-subtitle
 			& br
 				display: none
+	.facts
+		&__cards
+			&-item
+				&:not(:last-child)
+					width: auto
 @media (max-width: 320px)
 	.main
 		&__info
