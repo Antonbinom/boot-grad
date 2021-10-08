@@ -9,10 +9,34 @@
 			margin-right: 0
 			&-item
 				font-size: 16px
-				// & br
-				// 	display: block
 			&-phone
 				font-size: 18px
+	.about
+		&-image
+			width: 50%
+			margin-right: 70px
+			// width: auto
+		&__info
+			margin-top: 40px
+			width: 40%
+		&-title
+			margin-bottom: 10px
+			font-size: 50px
+		&-subtitle
+			margin-bottom: 22px
+			font-size: 46px
+		&-text
+			font-size: 16px
+	.terms
+		&__wrapper
+			justify-content: space-around
+		&-item
+			&:not(:last-child)
+				margin-right: 0
+		&-number
+			font-size: 42px
+		&-text
+			font-size: 16px
 @media (max-width: 1200px)
 	.header
 		&__menu
@@ -39,6 +63,18 @@
 			margin-top: calc(16px + 24 * (100vw / 1920))
 	.burger-button
 		display: flex
+	.about
+		&-image
+			flex-basis: 47%
+			margin-right: 60px
+		&__wrapper
+			align-items: center
+		&__info
+			margin: 0
+		&-title
+			font-size: 42px
+		&-subtitle
+			font-size: 36px
 @media (min-width: 992px)
 	.header
 		&-item, &__burger-item
@@ -49,26 +85,55 @@
 		&:hover
 			background-color: #9B131D
 @media (max-width: 991px)
+	.header
+		&__wrapper
+			padding-bottom: 17px
 	.main
+		padding: 50px 0
 		&__wrapper
 			flex-direction: column
 		&__info
 			width: auto
-			margin-top: calc(32px + 40 * (100vw / 1920))
+			margin-top: 0
 			margin-bottom: 50px
-
+			text-align: center
 		&-title
-			font-size: calc(35px + 40 * (100vw / 1920))
+			font-size: 54px
+			margin-bottom: 10px
 		&-subtitle
-			font-size: calc(24px + 20 * (100vw / 1920))
+			font-size: 32px
+			margin-bottom: 16px
 		&-text
-			font-size: calc(15px + 3 * (100vw / 1920))
+			font-size: 16px
 		&-image
 			position: static
-			width: auto
+			width: 100%
+			margin: auto
 		&-button
-			margin-top: calc(16px + 24 * (100vw / 1920))
-
+			margin: auto
+			margin-top: 28px
+	.about
+		padding: 40px 0
+		&__wrapper
+			flex-direction: column
+		&-image
+			order: 2
+			margin: 0
+			width: auto
+			min-width: auto
+		&__info
+			width: auto
+			margin: 0
+			margin-bottom: 50px
+	.terms
+		&__wrapper
+			flex-wrap: wrap
+			text-align: center
+		&-item
+			flex-basis: 50%
+			margin-bottom: 20px
+		&-number
+			font-size: 36px
 @media (max-width: 768px)
 	.header
 		&-phone
@@ -80,8 +145,10 @@
 	.burger-button
 		align-self: flex-start
 	.main
-		&-title
-			font-size: calc(38px + (58 + 58 * 0.7) * ((100vw - 360px) / 1920))
+		&__wrapper
+			align-items: center
+		&__info
+			width: 540px
 @media (max-width: 576px)
 	.header
 		&__logo
@@ -91,13 +158,61 @@
 				width: 40px
 				height: 41px
 			&-name
-				mb
 				font-size: 14px
 			&-text
 				font-size: 14px
 		&-phone
 			font-size: 16px
-@media (max-width: 360px)
 	.main
+		padding-top: 32px
+		padding-bottom: 24px
+		&__info
+			max-width: 350px
+			margin-bottom: 46px
 		&-title
+			margin-bottom: 8px
 			font-size: 38px
+		&-subtitle
+			font-size: 28px
+			margin-bottom: 16px
+		&-button
+			margin-top: 19px
+			font-size: 14px
+	.about
+		padding: 20px 0 16px
+		&__info
+			margin-bottom: 40px
+		&-title
+			font-size: 32px
+		&-subtitle
+			font-size: 26px
+			width: auto
+	.terms
+		padding-top: 13px
+		&__wrapper
+			text-align: start
+		&-item
+			flex-basis: 100%
+			margin-bottom: 30px
+		&-number
+			margin-bottom: 17px
+			font-size: 30px
+		&-text
+			font-size: 18px
+			& br
+				display: none
+@media (max-width: 360px)
+	.about
+		&-subtitle
+			& br
+				display: none
+@media (max-width: 320px)
+	.main
+		&__info
+			max-width: 300px
+		&-title
+			font-size: 32px
+		&-subtitle
+			font-size: 24px
+		&-text
+			font-size: 14px
