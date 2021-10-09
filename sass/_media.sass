@@ -77,6 +77,11 @@
 				bottom: -100px
 		&__play
 			left: 620px
+	.gallery
+		&__top
+			align-items: center
+		&-text
+			margin-top: 0
 	.title
 		font-size: 50px
 @media (max-width: 1200px)
@@ -149,6 +154,9 @@
 		padding-top: 65px
 		&-item
 			flex-basis: 48.5%
+	.gallery
+		&__items
+			gap: 20px
 	.title
 		font-size: 42px
 @media (min-width: 992px)
@@ -248,8 +256,18 @@
 			transform: translate(-50%, -50%)
 	.advantage
 		padding-top: 50px
-		&-item
-			padding: 32px 30px 20px
+		&-item, &-item:last-child
+			padding: 32px 30px 30px
+	.gallery
+		padding: 50px 0
+		&__top
+			margin-bottom: 30px
+		&-title
+			margin-right: 40px
+		&-text
+			font-size: 16px
+		&__items
+			grid-template-columns: repeat(2, 1fr)
 @media (max-width: 768px)
 	.container, .container-big
 		max-width: 92%
@@ -284,6 +302,20 @@
 	.slick
 		&-slide
 			margin: 0 15px
+
+	.gallery
+		padding: 40px 0
+		&__top
+			flex-direction: column
+			align-items: start
+			margin-bottom: 40px
+		&-title
+			margin-bottom: 10px
+		&-text
+			width: 380px
+			font-size: 16px
+			& br
+				display: block
 @media (max-width: 576px)
 	.header
 		&__logo
@@ -367,12 +399,13 @@
 				font-size: 16px
 	.advantage
 		padding-top: 20px
+		padding-bottom: 24px
 		&-title
 			margin-bottom: 25px
 		&-item
 			flex-basis: 100%
 			padding: 32px 31px 30px 34px
-			margin-bottom: 12px
+			margin-bottom: 11px
 			&__top
 				display: flex
 		&-image
@@ -386,6 +419,23 @@
 				display: none
 		&-text
 			width: 100%
+	.gallery
+		padding: 17px 0 24px
+		&__top
+			flex-direction: column
+			align-items: start
+			margin-bottom: 24px
+		&-title
+			margin-bottom: 13px
+		&-text
+			width: 301px
+			font-size: 14px
+		&__items
+			gap: 10px
+			margin-bottom: 33px
+		&-button
+			padding: 16px 57px 15px
+			font-size: 14px
 	.title
 		font-size: 32px
 @media (max-width: 360px)
@@ -402,6 +452,9 @@
 	.slick
 		&-slide
 			margin: 0
+	.gallery
+		&-item
+			height: 124px
 @media (max-width: 320px)
 	.main
 		&__info

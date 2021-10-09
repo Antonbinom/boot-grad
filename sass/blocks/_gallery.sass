@@ -1,0 +1,31 @@
+.gallery
+	padding: 65px 0
+	&__top
+		display: flex
+		margin-bottom: 64px
+	&-title
+		margin-right: 62px
+	&-text
+		width: 390px
+		font-family: 'Roboto', sans-serif
+		margin-top: 7px
+		font-weight: 300
+		font-size: 18px
+		line-height: 140%
+		& br
+			display: none
+	&__items
+		display: grid
+		grid-template-columns: repeat(3, 3fr)
+		gap: 30px
+		margin-bottom: 64px
+	&-item
+		max-height: 300px
+		& img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&-button
+		display: block
+		margin: 34px auto 0
+		padding: 16px 61px
