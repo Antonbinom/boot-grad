@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
   <meta name="robots" content="noindex" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/flickity.css" media="screen">
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png" />
@@ -120,8 +120,8 @@
         </div>
         <!-- /.about-image -->
         <div class="about__info">
-          <h2 class="about-title">о мастерской</h2>
-          <h3 class="about-subtitle">и каминах <br />стиля «шале»</h3>
+          <h2 class="title about-title">о мастерской</h2>
+          <h3 class="subtitle about-subtitle">и каминах <br />стиля «шале»</h3>
           <p class="about-text">
             Мастерская «БутГрад» успешно работает в области строительства объектов из камня. Мы занимаемся
             строительством домов, заборов, беседок, каминов, дорожек и площадок из натурального камня.
@@ -173,15 +173,15 @@
     <div class="container">
       <div class="facts__wrapper">
         <div class="facts__main">
-          <h2 class="facts-title">5 фактов</h2>
-          <h3 class="facts-subtitle">в пользу наших <br />каминов</h3>
+          <h2 class="title facts-title">5 фактов</h2>
+          <h3 class="subtitle facts-subtitle">в пользу наших <br />каминов</h3>
           <div class="facts__bottom">
             <button class="button facts-button">Оставить заявку</button>
             <img src="img/svg/bend-arrow.svg" alt="Стрелка" class="facts-arrow" />
           </div>
         </div>
         <!-- /.facts__main -->
-        <div class="facts__cards">
+        <div id="responsive" class="facts__cards responsive">
           <div class="facts__cards-item">
             <span class="facts__cards-number">01</span>
             <h4 class="facts__cards-title">
@@ -235,8 +235,116 @@
     <!-- /.container -->
   </section>
   <!-- /.facts -->
-  <!-- section.preview>.container>.preview__wrapper> -->
+  <section class="preview">
+    <div class="container">
+      <div class="preview__wrapper">
+        <div class="preview__info">
+          <h2 class="title preview-title">Солидно</h2>
+          <h3 class="subtitle preview-subtitle">и индивидуально</h3>
+          <div class="preview__bottom">
+            <p class="preview-text">Каждый камин строится из камня, обработанного вручную. Рисунок
+              кладки повторить невозможно. Поэтому даже похожая модель у каждого будет своя. Гарантированно уникальная
+              модель по заказу!</p>
+            <div class="preview-image preview-image--main">
+              <img src="img/video 2.jpg" alt="Фото: Камин">
+              <div class="preview__play">
+                <a class="preview__play-icon" href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox>
+                  <img src="img/play.png" alt="Иконка: Запуск видео">
+                </a>
+                <span class="preview__play-text">Смотреть видео</span>
+              </div>
+            </div>
+            <img src="img/video 1.jpg" alt="Фото: Камин" class="preview-image preview-image--second">
+          </div>
+        </div>
+        <!-- /.preview__info -->
+        <div class="preview__player"></div>
+        <!-- /.preview__player -->
+      </div>
+      <!-- /.preview__wrapper -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.preview -->
+  <section class="advantage">
+    <div class="container">
+      <div class="advantage__wrapper">
+        <h2 class="title advantage-title">преимущества</h2>
+        <!-- /.advantage-title -->
+        <div class="advantage__cards">
+          <div class="advantage-item">
+            <div class="advantage-item__top">
+              <img src="img/svg/advantage 1.svg" alt="Иконка: Камин" class="advantage-image">
+              <h4 class="advantage-name">Только эксклюзивные камины</h4>
+            </div>
+            <p class="advantage-text">Каждый камин будет построен из камня, обработанного вручную. Рисунок
+              кладки не повторяем. Вы гарантировано получаете уникальную модель.</p>
+          </div>
+          <!-- /.advantage__item -->
+          <div class="advantage-item">
+            <div class="advantage-item__top">
+              <img src="img/svg/advantage 2.svg" alt="Иконка: Камин" class="advantage-image">
+              <h4 class="advantage-name">Индивидуальный подход <br>при строительстве</h4>
+            </div>
+            <p class="advantage-text">Учитываем интересы и просьбы каждого заказчика. Процесс сборки очень вариативен,
+              мы строим камины любой сложности и дизайна.</p>
+          </div>
+          <!-- /.advantage__item -->
+          <div class="advantage-item">
+            <div class="advantage-item__top">
+              <img src="img/svg/advantage 3.svg" alt="Иконка: Камин" class="advantage-image">
+              <h4 class="advantage-name">Строительство «под ключ» по вашим эскизам</h4>
+            </div>
+            <p class="advantage-text">Осуществим ваш самый смелый проект. Достаточно
+              просто фото из Интернета или схематичного рисунка.</p>
+          </div>
+          <!-- /.advantage__item -->
+          <div class="advantage-item">
+            <div class="advantage-item__top">
+              <img src="img/svg/advantage 4.svg" alt="Иконка: Камин" class="advantage-image">
+              <h4 class="advantage-name">Всегда технически грамотные решения</h4>
+            </div>
+            <p class="advantage-text">Камин будет правильно работать. Яркое пламя без дыма.</p>
+          </div>
+          <!-- /.advantage__item -->
+          <div class="advantage-item">
+            <div class="advantage-item__top">
+              <img src="img/svg/advantage 5.svg" alt="Иконка: Камин" class="advantage-image">
+              <h4 class="advantage-name">У нас работают профессионалы своего дела</h4>
+            </div>
+            <p class="advantage-text">Каждый мастер имеет стаж работы от 10 лет и владеет смежными специальностями:
+              плотник, сварщик, бетонщик.</p>
+          </div>
+          <!-- /.advantage__item -->
+          <div class="advantage-item">
+            <div class="advantage-item__top">
+              <img src="img/svg/advantage 6.svg" alt="Иконка: Камин" class="advantage-image">
+              <h4 class="advantage-name">Экологически чистые материалы</h4>
+            </div>
+            <p class="advantage-text">В строительстве мы используем материалы только от проверенных поставщиков. Наличие
+              сертификатов обязательно. Здоровье вас и ваших близких будет в безопасности.</p>
+          </div>
+          <!-- /.advantage__item -->
+          <div class="advantage-item">
+            <div class="advantage-item__top">
+              <img src="img/svg/advantage 7.svg" alt="Иконка: Камин" class="advantage-image">
+              <h4 class="advantage-name">Обязательная конфиденциальность</h4>
+            </div>
+            <p class="advantage-text">Каждый из наших сотрудников подписывает обязательство о
+              неразглашении служебной информации. Взаимодействие при <br>строительстве осуществляется только с
+              индивидуальным менеджером.</p>
+          </div>
+          <!-- /.advantage__item -->
+        </div>
+        <!-- /.advantage__card -->
+      </div>
+      <!-- /.advantage__wrapper -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.advantage -->
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/fancybox.esm.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>

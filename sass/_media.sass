@@ -8,6 +8,17 @@
 			margin-right: 90px
 		&__cards
 			max-width: 790px
+	.preview
+		&-text
+			margin-right: 65px
+		&-image
+			&--main
+				width: 550px
+			&--second
+				width: 700px
+				bottom: -100px
+		&__play
+			left: 670px
 @media (max-width: 1440px)
 	.container, .container-big
 		max-width: 1200px
@@ -32,7 +43,6 @@
 			width: 46%
 		&-title
 			margin-bottom: 10px
-			font-size: 50px
 		&-subtitle
 			margin-bottom: 22px
 			font-size: 46px
@@ -49,10 +59,26 @@
 		&-text
 			font-size: 16px
 	.facts
-		&-title
-			font-size: 50px
 		&-subtitle
 			font-size: 42px
+	.preview
+		&__wrapper
+			margin-left: 100px
+		&-subtitle
+			margin-bottom: 40px
+			font-size: 42px
+		&-text
+			margin-right: 60px
+		&-image
+			&--main
+				width: 500px
+			&--second
+				width: 650px
+				bottom: -100px
+		&__play
+			left: 620px
+	.title
+		font-size: 50px
 @media (max-width: 1200px)
 	.container, .container-big
 		max-width: 992px
@@ -89,9 +115,10 @@
 			align-items: center
 		&__info
 			margin: 0
-		&-title
-			font-size: 42px
 		&-subtitle
+			font-size: 36px
+	.terms
+		&-number
 			font-size: 36px
 	.facts
 		&__wrapper
@@ -99,10 +126,31 @@
 		&__main
 			margin-bottom: 60px
 			margin-right: 0
+		&-subtitle
+			font-size: 36px
 		&__cards
 			&-item
 				&:last-child
 					margin-top: 0
+	.preview
+		&__wrapper
+			margin-left: 0px
+		&-text
+			margin-right: 50px
+		&-image
+			&--main
+				width: 465px
+			&--second
+				width: 590px
+				bottom: -100px
+		&__play
+			left: 555px
+	.advantage
+		padding-top: 65px
+		&-item
+			flex-basis: 48.5%
+	.title
+		font-size: 42px
 @media (min-width: 992px)
 	.header
 		&-item, &__burger-item
@@ -169,12 +217,39 @@
 		padding-top: 50px
 		&__cards
 			&-item
-				&:not(:last-child)
-					width: 300px
+				&:not(:last-child), &:last-child
+					max-width: 300px
 		&-title
 			font-size: 42px
 		&-subtitle
 			font-size: 36px
+	.preview
+		padding: 50px 0
+		&__wrapper
+			margin-left: 0px
+		&-subtitle
+			margin-bottom: 20px
+		&-text
+			max-width: 100%
+			margin-bottom: 47px
+			margin-right: 0
+		&__bottom
+			flex-direction: column
+		&-image
+			&--main
+				position: relative
+				width: auto
+			&--second
+				display: none
+		&__play
+			height: 59px
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+	.advantage
+		padding-top: 50px
+		&-item
+			padding: 32px 30px 20px
 @media (max-width: 768px)
 	.container, .container-big
 		max-width: 92%
@@ -196,6 +271,19 @@
 	.button
 		padding-top: 18px
 		padding-bottom: 17px
+	.facts
+		&__cards
+			&-item
+				&.responsive
+				&:not(:last-child), &:last-child
+					max-width: -webkit-fill-available !important
+					width: auto
+					margin: 0 -15px
+			&.responsive
+				max-width: -webkit-fill-available !important
+	.slick
+		&-slide
+			margin: 0 15px
 @media (max-width: 576px)
 	.header
 		&__logo
@@ -229,8 +317,6 @@
 		padding: 20px 0 16px
 		&__info
 			margin-bottom: 40px
-		&-title
-			font-size: 32px
 		&-subtitle
 			font-size: 26px
 			width: auto
@@ -251,23 +337,57 @@
 				display: none
 	.facts
 		padding-top: 18px
-		padding-bottom: 24px
+		padding-bottom: 0px
 		&__main
 			margin-bottom: 17px
 		&-title
 			margin-bottom: 8px
-			font-size: 32px
 		&-subtitle
 			font-size: 26px
 		&__bottom
 			display: none
 		&__cards
-			&-item
-				&:not(:first-child)
-					display: none
 			&-title
 				margin-bottom: 12px
 				font-size: 16px
+	.preview
+		padding-bottom: 24px
+		padding-top: 5px
+		&-title
+			margin-bottom: 8px
+		&-subtitle
+			margin-bottom: 24px
+			font-size: 26px
+		&-text
+			margin-bottom: 52px
+			font-size: 16px
+		&__play
+			width: 236px
+			&-text
+				font-size: 16px
+	.advantage
+		padding-top: 20px
+		&-title
+			margin-bottom: 25px
+		&-item
+			flex-basis: 100%
+			padding: 32px 31px 30px 34px
+			margin-bottom: 12px
+			&__top
+				display: flex
+		&-image
+			margin-right: 16px
+			margin-bottom: 16px
+		&-name
+			flex-basis: 75%
+			font-size: 16px
+			line-height: 120%
+			& br
+				display: none
+		&-text
+			width: 100%
+	.title
+		font-size: 32px
 @media (max-width: 360px)
 	.about
 		&-subtitle
@@ -276,8 +396,12 @@
 	.facts
 		&__cards
 			&-item
-				&:not(:last-child)
-					width: auto
+				&.responsive
+				&:not(:last-child), &:last-child
+					margin: 0
+	.slick
+		&-slide
+			margin: 0
 @media (max-width: 320px)
 	.main
 		&__info
