@@ -1,0 +1,54 @@
+.modal
+	&__overlay
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 200
+		background: #3D495B
+		transition: opacity 0.2s
+		visibility: hidden
+		opacity: 0
+		&--visible
+			visibility: visible
+			opacity: 0.9
+	&__dialog
+		position: fixed
+		top: 50%
+		left: 50%
+		z-index: 210
+		width: 1075px
+		height: auto
+		padding: 98px 157px 107px
+		text-align: center
+		background: #FFF7F2
+		border-radius: 10px
+		transition: opacity 0.2s
+		transform: translate(-50%, -50%)
+		visibility: hidden
+		opacity: 0
+		&--visible
+			visibility: visible
+			opacity: 1
+	&-title
+		margin-bottom: 51px
+		font-weight: bold
+		font-size: 48px
+		line-height: 110%
+		text-align: center
+		letter-spacing: 0.03em
+		text-transform: uppercase
+	&-input
+		margin-right: 27px
+		margin-bottom: 18px
+	&-button
+		padding: 14px 42px 14px
+	& .checkbox
+		margin-left: 78px
+	&-close
+		position: absolute
+		top: 36px
+		right: 42px
+		width: 25px
+		height: 25px

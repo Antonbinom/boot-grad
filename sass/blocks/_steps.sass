@@ -1,0 +1,75 @@
+.steps
+	padding: 57px 0 65px
+	&-title
+		margin-bottom: 56px
+		line-height: 133%
+		& span
+			margin-right: 5px
+			font-weight: bold
+			text-transform: uppercase
+			-webkit-text-fill-color: transparent
+			-webkit-text-stroke: 1px $primary
+	&__slider
+		// justify-content: space-between
+		&-item
+			position: relative
+			max-width: 490px
+			min-height: 454px
+			height: auto
+			padding: 66px 68px 67px 64px
+			background-color: #FFF0E7
+		&-name
+			margin-bottom: 16px
+			font-weight: 500
+			font-size: 26px
+		&-text
+			font-weight: 300
+			font-size: 16px
+			line-height: 164%
+		&-form
+			margin-top: 20px
+		&-input
+			margin-bottom: 18px
+		&-button
+			display: inline-block
+			margin-top: 29px
+			padding-top: 16px
+			padding-bottom: 16px
+		&-number
+			position: absolute
+			bottom: 0px
+			right: -5px
+			font-size: 84px
+			line-height: 74%
+			text-transform: uppercase
+			-webkit-text-fill-color: transparent
+			-webkit-text-stroke: 1px #C39A7E
+		& .slick
+			&-slide
+				margin: 0 15px
+			&-list
+				margin-left: -15px
+				margin-right: -15px
+			&-arrow
+				position: absolute
+				top: -77px-24px
+				right: 0
+				width: 24px
+				height: 24px
+				font-size: 0
+				background-color: transparent
+				border: none
+				cursor: pointer
+			&-prev
+				display: block
+				right: 236px
+				background-image: url(../img/svg/left-arrow.svg)
+				&:after
+					content: ""
+					display: block
+					width: 192px
+					height: 2px
+					margin-left: 28px
+					background-color: $primary2
+			&-next
+				background-image: url(../img/svg/right-arrow.svg)

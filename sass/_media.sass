@@ -19,6 +19,14 @@
 				bottom: -100px
 		&__play
 			left: 670px
+	.steps
+		&__slider
+			&-item
+				padding-right: 40px
+				padding-left: 40px
+	.request
+		&-image
+			width: 550px
 @media (max-width: 1440px)
 	.container, .container-big
 		max-width: 1200px
@@ -82,6 +90,23 @@
 			align-items: center
 		&-text
 			margin-top: 0
+	.steps
+		&__slider
+			&-item
+				padding-right: 30px
+				padding-left: 30px
+				&--form
+					padding-bottom: 26px
+	.request
+		&-subtitle
+			font-size: 50px
+		&-form
+			display: flex
+			flex-direction: column
+		&-button
+			max-width: 220px
+			margin-top: 24px
+			order: 2
 	.title
 		font-size: 50px
 @media (max-width: 1200px)
@@ -157,8 +182,47 @@
 	.gallery
 		&__items
 			gap: 20px
+	.steps
+		&__slider
+			&-item
+				padding-right: 60px
+				padding-left: 60px
+				&--form
+					padding-bottom: 67px
+	.request
+		&__wrapper
+			align-items: center
+		&__info
+			margin-top: 0
+		&-subtitle
+			margin-bottom: 30px
+			font-size: 42px
+		&-image
+			width: 450px
+	.footer
+		&__wrapper
+			flex-wrap: wrap
+		&__brand
+			order: 2
+			flex-basis: 50%
+		&__socials
+			justify-content: end
+		&__contacts
+			flex-basis: 62%
+			margin-right: 0
+			margin-bottom: 50px
 	.title
 		font-size: 42px
+	.modal
+		&__dialog
+			padding: 90px 147px
+			width: 900px
+		&-title
+			font-size: 42px
+		& .checkbox
+			margin-left: 0
+	.scrollToTop
+		bottom: 46px
 @media (min-width: 992px)
 	.header
 		&-item, &__burger-item
@@ -168,7 +232,7 @@
 		transition: all 0.5s
 		&:hover
 			background-color: #9B131D
-@media (max-width: 991px)
+@media (max-width: 992px)
 	.container, .container-big
 		max-width: 720px
 	.header
@@ -268,6 +332,60 @@
 			font-size: 16px
 		&__items
 			grid-template-columns: repeat(2, 1fr)
+	.steps
+		&__slider
+			&-item
+				min-height: 464px
+				padding: 40px 30px
+				&--form
+					padding-bottom: 67px
+			&-name
+				font-size: 21px
+			&-text
+				font-size: 16px
+			&-number
+				font-size: 60px
+		& .slick
+			&-slide
+				margin: 0 10px
+			&-list
+				margin-left: -10px
+				margin-right: -10px
+			&-arrow
+				bottom: -47px
+				top: unset
+				right: unset
+			&-prev
+				left: calc((100% - 260px) / 2)
+			&-next
+				right: calc((100% - 260px) / 2)
+	.request
+		&__wrapper
+			flex-direction: column
+		&__info
+			margin-bottom: 50px
+		&-image
+			width: auto
+	.modal
+		&__dialog
+			padding: 40px 60px
+			width: 90%
+		&-title
+			margin-bottom: 25px
+		&-form
+			display: flex
+			flex-direction: column
+			align-items: center
+		&-input
+			margin-right: 0
+		& .checkbox
+			margin-left: 0
+			margin-bottom: 20px
+		&-button
+			order: 3
+		&-close
+			top: 20px
+			right: 25px
 @media (max-width: 768px)
 	.container, .container-big
 		max-width: 92%
@@ -316,6 +434,12 @@
 			font-size: 16px
 			& br
 				display: block
+	.steps
+		&__slider
+			&-item
+				max-width: 100%
+				min-height: 420px
+				padding: 32px 32px 36px
 @media (max-width: 576px)
 	.header
 		&__logo
@@ -436,8 +560,100 @@
 		&-button
 			padding: 16px 57px 15px
 			font-size: 14px
+	.steps
+		padding: 24px 0 50px
+		&-title
+			max-width: 300px
+			margin-bottom: 25px
+			line-height: 110%
+			& br
+				display: none
+		& span
+			margin-left: 3px
+		&__slider
+			&-item
+				min-height: 420px
+				padding: 32px 32px 36px
+			&-name
+				font-size: 26px
+			&-form
+				margin-top: 17px
+			&-button
+				margin-top: 22px
+				font-size: 14px
+			&-number
+				font-size: 48px
+				line-height: 75%
+				right: 0
+		& .slick
+			&-arrow
+				bottom: -60px
+	.request
+		padding: 57px 0 50px
+		&__wrapper
+			align-items: center
+		&__info
+			text-align: center
+			margin-bottom: 40px
+		&-title
+			margin-bottom: 8px
+		&-subtitle
+			margin-bottom: 32px
+			font-size: 32px
+			letter-spacing: 0.05rem
+		&-form
+			margin: auto
+			max-width: 276px
+		& p
+			text-align: left
+		&-button
+			margin: 23px auto 5px
+			font-size: 14px
+	.footer
+		padding: 48px 0 46px
+		&__wrapper
+			flex-direction: column
+			align-items: center
+		&__socials
+			margin-top: 0
+			margin-bottom: 29px
+			order: -1
+		&__contacts
+			max-width: 272px
+			margin-bottom: 31px
+			text-align: center
+		&-link
+			&--tel
+				margin: 0 auto
+				margin-bottom: 15px
+				&:last-child
+					margin-bottom: 24px
+			&--mail
+				margin-top: 9px
+				margin-bottom: 24px
+		&-address
+			margin-bottom: 32px
+		&__brand
+			align-self: start
+			&-text
+				margin-bottom: 16px
 	.title
 		font-size: 32px
+	.modal
+		&__dialog
+			padding-left: 30px
+			padding-right: 30px
+		&-title
+			font-size: 28px
+		& .checkbox
+			text-align: left
+		&-button
+			font-size: 14px
+		&-close
+			width: 20px
+			height: 20px
+	.scrollToTop
+		right: 15px
 @media (max-width: 360px)
 	.about
 		&-subtitle
@@ -455,6 +671,13 @@
 	.gallery
 		&-item
 			height: 124px
+	.request
+		&-image
+			width: 330px
+			height: 270px
+	.modal
+		&-title
+			font-size: 21px
 @media (max-width: 320px)
 	.main
 		&__info

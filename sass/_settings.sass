@@ -35,6 +35,7 @@ a
 	border: none
 	box-shadow: 0px 4px 15px rgba(106, 21, 27, 0.5)
 	cursor: pointer
+	outline: none
 link
 	cursor: pointer
 .title
@@ -48,3 +49,28 @@ link
 	text-transform: uppercase
 	-webkit-text-fill-color: transparent
 	-webkit-text-stroke: 1px $primary
+.input
+	width: 100%
+	max-width: 358px
+	padding: 12px 24px
+	font-weight: 300
+	font-size: 16px
+	line-height: 100%
+	color: $primary
+	background: #FFFFFF
+	border: 1px solid $primary2
+	box-sizing: border-box
+	border-radius: 10px
+	outline: none
+	&::placeholder
+		color: $primary2
+.checkbox
+	display: flex
+	font-size: 14px
+	line-height: 100%
+	color: #3D424E
+	&-input
+		margin-right: 13px
+		border: 1px solid #403C39
+		box-sizing: border-box
+		border-radius: 4px
