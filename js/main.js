@@ -2,12 +2,22 @@ $(document).ready(function () {
 
 	// Burger Menu
 	let burgerButton = document.querySelector('.burger-button');
+	let menuLink = document.querySelector('.header__burger-link');
+
+	// Закрытие/открытие бургер меню при клике на кнопку
 	burgerButton.addEventListener('click', function () {
 		document.querySelector('.header__burger-menu').classList.toggle('header__burger-menu--visible');
 	});
 
-	// Silck Slider - секция Факты
+	// Закрытие бургер меню при клике на ссылку
+	document.querySelectorAll('.header__burger-link').forEach(a => {
+		a.addEventListener('click', e => {
+			$('.header__burger-menu').removeClass('header__burger-menu--visible');
+		});
+	});
 
+
+	// Silck Slider - секция 5 фактов
 	$('.facts__cards.responsive').slick({
 		arrows: false,
 		slidesToShow: 1,
@@ -19,7 +29,7 @@ $(document).ready(function () {
 				settings: 'unslick'
 			},
 			{
-				breakpoint: 577,
+				breakpoint: 576,
 				settings: {
 					slidesToShow: 2,
 				}
@@ -28,7 +38,6 @@ $(document).ready(function () {
 	});
 
 	// Silck Slider - секция 10 Шагов
-
 	$('.steps__slider.responsive').slick({
 		arrows: true,
 		slidesToShow: 3,
@@ -117,29 +126,52 @@ $(document).ready(function () {
 
 	let modalOverlay = $('.modal__overlay');
 	let modalDialog = $('.modal__dialog');
+	let modalSuccessOverlay = $('.modal__overlay-success');
+	let modalSuccessDialog = $('.modal__success');
 
 	function openModal() {
 		modalOverlay.addClass('modal__overlay--visible');
 		modalDialog.addClass('modal__dialog--visible');
-	};
+	}
 
+	// Закрытие формы при нажатии на крестик
 	function closeModal(event) {
 		event.preventDefault();
 		modalOverlay.removeClass('modal__overlay--visible');
 		modalDialog.removeClass('modal__dialog--visible');
-	};
+		modalSuccessOverlay.addClass('modal__overlay-success--hidden');
+		modalSuccessDialog.addClass('modal__success--hidden');
+	}
 
+	// Закрытие формы при нажатии клавиши ESC
 	$(document).on('keydown', function (event) {
 		if (event.code == 'Escape') {
 			modalDialog.removeClass('modal__dialog--visible');
 			modalOverlay.removeClass('modal__overlay--visible');
-			$('body').removeClass('hold');
+			modalSuccessOverlay.addClass('modal__overlay-success--hidden');
+			modalSuccessDialog.addClass('modal__success--hidden');
 		}
 	});
-	//закрытие при клике на маску
-	// $('.modal').on('click', function (event) {
-	// 	modalDialog.removeClass('modal__dialog--visible');
-	// 	modalOverlay.removeClass('modal__overlay--visible');
-	// 	$('body').removeClass('hold');
-	// });
+	// Закрытие модального окна при клике на маску
+	$('.modal').on('click', function () {
+		modalDialog.removeClass('modal__dialog--visible');
+		modalOverlay.removeClass('modal__overlay--visible');
+		modalSuccessOverlay.addClass('modal__overlay-success--hidden');
+		modalSuccessDialog.addClass('modal__success--hidden');
+	});
+
+	// Отменяет закрытие моального окна при клике на него
+	$('.modal__dialog').on('click', function (event) {
+		event.stopPropagation();
+	});
+
+	// Блокировка Copy Paste для телефона
+	$('input').bind('copy paste', function (e) {
+		e.preventDefault();
+	});
+
+	// Маска ввода номера телефона (плагин maskedinput)
+	$('.input-phone').mask("+7 (999) 999 - 9999", {
+		autoclear: false
+	});
 });

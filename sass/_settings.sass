@@ -5,6 +5,7 @@
 h1, h2, h3, h4, h5, p
 	margin: 0
 body
+	padding-top: 88px
 	font-family: 'Rubik', sans-serif
 	font-size: 16px
 	font-weight: 400
@@ -45,10 +46,12 @@ link
 	letter-spacing: 0.03em
 	text-transform: uppercase
 .subtitle
+	font-family: 'Open Sans', sans-serif
 	font-weight: bold
 	text-transform: uppercase
 	-webkit-text-fill-color: transparent
 	-webkit-text-stroke: 1px $primary
+	letter-spacing: 0.1em
 .input
 	width: 100%
 	max-width: 358px
@@ -64,6 +67,8 @@ link
 	outline: none
 	&::placeholder
 		color: $primary2
+	&:focus
+		font-weight: 500
 .checkbox
 	display: flex
 	font-size: 14px

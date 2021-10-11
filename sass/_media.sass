@@ -28,6 +28,8 @@
 		&-image
 			width: 550px
 @media (max-width: 1440px)
+	body
+		padding-top: 86px
 	.container, .container-big
 		max-width: 1200px
 	.header
@@ -42,6 +44,9 @@
 				font-size: 16px
 			&-phone
 				font-size: 18px
+	.main
+		&-image
+			width: 42%
 	.about
 		&-image
 			width: 50%
@@ -105,7 +110,7 @@
 			flex-direction: column
 		&-button
 			max-width: 220px
-			margin-top: 24px
+			margin-top: 22px
 			order: 2
 	.title
 		font-size: 50px
@@ -214,13 +219,11 @@
 	.title
 		font-size: 42px
 	.modal
-		&__dialog
+		&__shape
 			padding: 90px 147px
 			width: 900px
 		&-title
 			font-size: 42px
-		& .checkbox
-			margin-left: 0
 	.scrollToTop
 		bottom: 46px
 @media (min-width: 992px)
@@ -367,7 +370,7 @@
 		&-image
 			width: auto
 	.modal
-		&__dialog
+		&__shape
 			padding: 40px 60px
 			width: 90%
 		&-title
@@ -378,15 +381,14 @@
 			align-items: center
 		&-input
 			margin-right: 0
-		& .checkbox
-			margin-left: 0
-			margin-bottom: 20px
 		&-button
 			order: 3
 		&-close
 			top: 20px
 			right: 25px
 @media (max-width: 768px)
+	body
+		padding-top: 122px
 	.container, .container-big
 		max-width: 92%
 		padding: 0
@@ -455,7 +457,7 @@
 		&-phone
 			font-size: 16px
 	.main
-		padding-top: 32px
+		padding-top: 14px
 		padding-bottom: 25px
 		&__info
 			max-width: 350px
@@ -493,7 +495,7 @@
 				display: none
 	.facts
 		padding-top: 18px
-		padding-bottom: 0px
+		padding-bottom: 30px
 		&__main
 			margin-bottom: 17px
 		&-title
@@ -607,7 +609,7 @@
 		& p
 			text-align: left
 		&-button
-			margin: 23px auto 5px
+			margin: 22px auto 5px
 			font-size: 14px
 	.footer
 		padding: 48px 0 46px
@@ -643,10 +645,18 @@
 		&__dialog
 			padding-left: 30px
 			padding-right: 30px
+		&__success
+			padding-top: 50px
+			padding-left: 20px
+			padding-right: 20px
+			&-subtitle
+				font-size: 21px
+			&-text
+				font-size: 14px
+		&__socials
+			display: none
 		&-title
 			font-size: 28px
-		& .checkbox
-			text-align: left
 		&-button
 			font-size: 14px
 		&-close
@@ -678,6 +688,9 @@
 	.modal
 		&-title
 			font-size: 21px
+		&__success
+			&-subtitle
+				font-size: 18px
 @media (max-width: 320px)
 	.main
 		&__info

@@ -412,8 +412,8 @@
               сам вам
               перезвонит и ответит на все ваши вопросы!</p>
             <form action="send.php" method="post" class="steps__slider-form form">
-              <input type="text" name="phone" class="steps__slider-input input-phone input" placeholder="Телефон"
-                required>
+              <input type="text" name="phone" minlength="18" maxlength="18" class="request-input input-phone input"
+                placeholder="Телефон" required>
               <button class="steps__slider-button button">Оставить заявку</button>
             </form>
             <span class="steps__slider-number">01</span>
@@ -551,7 +551,7 @@
       <div class="modal__dialog modal__shape">
         <h3 class="modal-title">заявка на строительство камина</h3>
         <form action="send.php" method="post" class="modal-form form">
-          <input type="text" name="phone" minlength="18" maxlength="18" class="modal-input input-phone input"
+          <input type="text" name="phone" minlength="18" maxlength="18" class="request-input input-phone input"
             placeholder="Телефон" required>
           <button class="modal-button button" type="submit" data-href="#modal-success" data-toggle="success">Оставить
             заявку</button>
@@ -560,6 +560,33 @@
         <a href="" class="modal-close"><img src="img/svg/close.svg" alt="Иконка: Крестик"></a>
       </div>
       <!-- /.modal__dialog -->
+    </div>
+  </div>
+  <!-- /.modal -->
+  <div class="modal">
+    <div class="modal__overlay modal__overlay-success">
+      <div class="modal__shape modal__success modal__dialog">
+        <h3 class="modal-title modal__success-title">Спасибо за вашу заявку!</h3>
+        <h4 class="modal__success-subtitle">Заявка отправлена! Сегодня мы свяжемся с вами</h4>
+        <p class="modal__success-text">
+          Пока вы ждете нашего звонка, можете ознакомиться с нашими возможностями в области строительства из
+          натурального
+          камня
+        </p>
+        <a href="https://kamin-iz-kamnya.ru" class="button modal-button modal__succes-button">Узнать
+          подробнее</a>
+        <div class="modal__socials"><span>Мы в соцсетях</span>
+          <div class="modal__socials-links">
+            <a class="modal__success-link" href="https://www.facebook.com" target="_blank">
+              <img src="img/svg/fb.svg" alt="Иконка: Facebook">
+            </a>
+            <a class="modal__social-link" href="https://www.instagram.com" target="_blank">
+              <img src="img/svg/inst.svg" alt="Иконка: Instagram">
+          </div>
+        </div>
+        <a href="" class="modal-close"><img src="img/svg/close.svg" alt="Иконка: Крестик"></a>
+      </div>
+      <!-- /.modal__success -->
     </div>
   </div>
   <!-- /.modal -->

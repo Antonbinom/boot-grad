@@ -6,14 +6,17 @@
 		right: 0
 		bottom: 0
 		z-index: 200
-		background: #3D495B
+		background: rgba(61, 73, 91, 0.9)
 		transition: opacity 0.2s
 		visibility: hidden
 		opacity: 0
 		&--visible
 			visibility: visible
-			opacity: 0.9
-	&__dialog
+			opacity: 1
+		&-success
+			visibility: visible
+			opacity: 1
+	&__shape
 		position: fixed
 		top: 50%
 		left: 50%
@@ -26,11 +29,6 @@
 		border-radius: 10px
 		transition: opacity 0.2s
 		transform: translate(-50%, -50%)
-		visibility: hidden
-		opacity: 0
-		&--visible
-			visibility: visible
-			opacity: 1
 	&-title
 		margin-bottom: 51px
 		font-weight: bold
@@ -41,7 +39,7 @@
 		text-transform: uppercase
 	&-input
 		margin-right: 27px
-		margin-bottom: 18px
+		margin-bottom: 22px
 	&-button
 		padding: 14px 42px 14px
 	& .checkbox
@@ -52,3 +50,62 @@
 		right: 42px
 		width: 25px
 		height: 25px
+	&__dialog
+		visibility: hidden
+		opacity: 0
+		&--visible
+			visibility: visible
+			opacity: 1
+
+.modal
+	&__overlay
+		&-success
+			display: block
+			visibility: visible
+			opacity: 1
+			&--hidden
+				display: none
+				visibility: hidden
+				opacity: 0
+	&__success
+		display: block
+		padding-bottom: 98px
+		visibility: visible
+		opacity: 1
+		&--hidden
+			display: none
+			visibility: hidden
+			opacity: 0
+		&-title
+			margin-bottom: 24px
+		&-subtitle
+			margin-bottom: 32px
+			font-weight: 500
+			font-size: 32px
+			line-height: 110%
+			text-align: center
+			letter-spacing: 0.03em
+			text-transform: uppercase
+		&-text
+			max-width: 630px
+			margin: auto
+			margin-bottom: 47px
+			font-weight: 500
+			font-size: 18px
+			line-height: 140%
+		&-button
+			display: inline-block
+	&__socials
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-top: 65px
+		& span
+			margin-bottom: 16px
+			font-weight: 500
+			font-size: 18px
+			line-height: 140%
+		&-links
+			display: flex
+			justify-content: space-between
+			width: 92px
