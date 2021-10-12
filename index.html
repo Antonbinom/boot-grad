@@ -250,12 +250,11 @@
               модель по заказу!</p>
             <div class="preview-image preview-image--main">
               <img src="img/video-2.jpg" alt="Фото: Камин">
-              <div class="preview__play">
-                <a class="preview__play-icon popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">
-                  <img src="img/play.png" alt="Иконка: Запуск видео">
-                </a>
+              <a class="preview__play preview__play-icon popup-youtube"
+                href="http://www.youtube.com/watch?v=0O2aH4XLbto">
+                <img src="img/play.png" alt="Иконка: Запуск видео">
                 <span class="preview__play-text">Смотреть видео</span>
-              </div>
+              </a>
             </div>
             <img src="img/video-1.jpg" alt="Фото: Камин" class="preview-image preview-image--second">
           </div>
@@ -412,8 +411,8 @@
               сам вам
               перезвонит и ответит на все ваши вопросы!</p>
             <form action="send.php" method="post" class="steps__slider-form form">
-              <input type="text" name="phone" class="steps__slider-input input-phone input" placeholder="Телефон"
-                required>
+              <input type="tel" name="phone" minlength="18" class="steps__slider-input input-phone input"
+                placeholder="Телефон" required>
               <button class="steps__slider-button button">Оставить заявку</button>
             </form>
             <span class="steps__slider-number">01</span>
@@ -501,8 +500,8 @@
           <h2 class="request-title title">заявка</h2>
           <h3 class="request-subtitle subtitle">на строительство камина</h3>
           <form action="send.php" method="post" class="request-form form">
-            <input type="text" name="phone" minlength="18" maxlength="18" class="request-input input-phone input"
-              placeholder="Телефон" required>
+            <input type="tel" name="phone" minlength="18" class="request-input input-phone input" placeholder="Телефон"
+              required>
             <button class="request-button button" type="submit">Оставить заявку</button>
           </form>
         </div>
@@ -551,8 +550,8 @@
       <div class="modal__dialog modal__shape">
         <h3 class="modal-title">заявка на строительство камина</h3>
         <form action="send.php" method="post" class="modal-form form">
-          <input type="text" name="phone" minlength="18" maxlength="18" class="modal-input input-phone input"
-            placeholder="Телефон" required>
+          <input type="tel" name="phone" minlength="18" class="modal-input input-phone input" placeholder="Телефон"
+            required>
           <button class="modal-button button" type="submit" data-href="#modal-success" data-toggle="success">Оставить
             заявку</button>
         </form>

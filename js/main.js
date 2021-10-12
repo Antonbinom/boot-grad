@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
 	// Burger Menu
-	let burgerButton = document.querySelector('.burger-button');
-	let menuLink = document.querySelector('.header__burger-link');
+	var burgerButton = document.querySelector('.burger-button');
+	var menuLink = document.querySelector('.header__burger-link');
 
 	// Закрытие/открытие бургер меню при клике на кнопку
 	burgerButton.addEventListener('click', function () {
@@ -119,15 +119,15 @@ $(document).ready(function () {
 	});
 
 	// Вызов/закрытие модального окна
-	let modalButton = $('[data-toggle=modal]');
-	let closeModalButton = $('.modal-close');
+	var modalButton = $('[data-toggle=modal]');
+	var closeModalButton = $('.modal-close');
 	modalButton.on('click', openModal);
 	closeModalButton.on('click', closeModal);
 
-	let modalOverlay = $('.modal__overlay');
-	let modalDialog = $('.modal__dialog');
-	let modalSuccessOverlay = $('.modal__overlay-success');
-	let modalSuccessDialog = $('.modal__success');
+	var modalOverlay = $('.modal__overlay');
+	var modalDialog = $('.modal__dialog');
+	var modalSuccessOverlay = $('.modal__overlay-success');
+	var modalSuccessDialog = $('.modal__success');
 
 	function openModal() {
 		modalOverlay.addClass('modal__overlay--visible');

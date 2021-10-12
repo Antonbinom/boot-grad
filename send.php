@@ -29,10 +29,10 @@ try {
 	include 'logpass.php';
 	$mail->SMTPSecure = 'ssl';
 	$mail->Port       = 465;
-	$mail->setFrom('antonbinom2021@gmail.com', 'Семенихин Антон'); // Адрес самой почты и имя отправителя
+	$mail->setFrom('xxxxxxxxx@gmail.com', 'Иван Иванов'); // Адрес самой почты и имя отправителя
 
 	// Получатель письма
-	$mail->addAddress('antonbinom@yandex.ru');
+	$mail->addAddress('имя почты получателя');
 
 	// Отправка сообщения
 	$mail->isHTML(true);
@@ -52,4 +52,3 @@ try {
 
 // Отображение результата
 header('location: success.html');
-// echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
