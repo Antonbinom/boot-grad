@@ -123,6 +123,7 @@ $(document).ready(function () {
 	var closeModalButton = $('.modal-close');
 	modalButton.on('click', openModal);
 	closeModalButton.on('click', closeModal);
+	$('body').removeClass('hold');
 
 	var modalOverlay = $('.modal__overlay');
 	var modalDialog = $('.modal__dialog');
@@ -132,6 +133,7 @@ $(document).ready(function () {
 	function openModal() {
 		modalOverlay.addClass('modal__overlay--visible');
 		modalDialog.addClass('modal__dialog--visible');
+		$('body').addClass('hold');
 	}
 
 	// Закрытие формы при нажатии на крестик
@@ -141,6 +143,7 @@ $(document).ready(function () {
 		modalDialog.removeClass('modal__dialog--visible');
 		modalSuccessOverlay.addClass('modal__overlay-success--hidden');
 		modalSuccessDialog.addClass('modal__success--hidden');
+		$('body').removeClass('hold');
 	}
 
 	// Закрытие формы при нажатии клавиши ESC
@@ -150,6 +153,7 @@ $(document).ready(function () {
 			modalOverlay.removeClass('modal__overlay--visible');
 			modalSuccessOverlay.addClass('modal__overlay-success--hidden');
 			modalSuccessDialog.addClass('modal__success--hidden');
+			$('body').removeClass('hold');
 		}
 	});
 	// Закрытие модального окна при клике на маску
@@ -158,6 +162,7 @@ $(document).ready(function () {
 		modalOverlay.removeClass('modal__overlay--visible');
 		modalSuccessOverlay.addClass('modal__overlay-success--hidden');
 		modalSuccessDialog.addClass('modal__success--hidden');
+		$('body').removeClass('hold');
 	});
 
 	// Отменяет закрытие моального окна при клике на него

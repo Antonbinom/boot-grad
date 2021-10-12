@@ -19,6 +19,10 @@ body {
   background-color: #FFF7F2;
 }
 
+body.hold {
+  overflow-y: clip;
+}
+
 img {
   max-width: 100%;
 }
@@ -1202,7 +1206,7 @@ template {
 }
 
 .modal__shape {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   z-index: 210;
@@ -2250,5 +2254,14 @@ template {
   }
   .main-text {
     font-size: 14px;
+  }
+}
+
+@media (max-height: 576px) {
+  .modal__overlay {
+    overflow-y: auto;
+  }
+  .modal__success {
+    top: 320px;
   }
 }
