@@ -15,11 +15,16 @@
 		& br
 			display: none
 	&__items
-		display: grid
-		grid-template-columns: repeat(3, 3fr)
-		gap: 30px
-		margin-bottom: 64px
+		// display: grid
+		// grid-template-columns: repeat(3, 3fr)
+		// gap: 30px
+		// margin-bottom: 64px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
 	&-item
+		flex-basis: 32%
+		margin-bottom: 30px
 		max-height: 300px
 		& img
 			width: 100%
