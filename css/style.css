@@ -546,10 +546,11 @@ template {
   left: 0;
   right: 0;
   z-index: 20;
-  display: none;
   padding: 17px 0;
   margin-top: -1px;
   background-color: #344053;
+  transition: linear 0.3s;
+  transform: translateY(-200%);
 }
 
 .header__burger-list {
@@ -1506,7 +1507,8 @@ template {
     margin-right: 20px;
   }
   .header__burger-menu--visible {
-    display: block;
+    /* display: block; */
+    transform: unset;
   }
   .main__info {
     margin-top: calc(32px + 40 * (100vw / 1920));
@@ -1855,7 +1857,7 @@ template {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 122px;
+    padding-top: 105px;
   }
   .container, .container-big {
     max-width: 92%;

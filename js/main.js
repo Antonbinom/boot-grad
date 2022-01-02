@@ -105,18 +105,28 @@ $(document).ready(function () {
 		return false;
 	});
 
-	// Плавный скролл якорных ссылок
-	$(function () {
-		$("a[href^='#']").click(function () {
-			var _href = $(this).attr('href');
-			$('html, body').animate({
-					scrollTop: $(_href).offset().top + 'px',
-				},
-				1000
-			);
-			return false;
-		});
+	var navLink = $('.header__menu-link');
+	navLink.on('click', function (event) {
+		event.preventDefault();
+		var target = $(this).attr('href');
+		var top = $(target).offset().top - '60';
+		$('html,body').animate({
+			scrollTop: top
+		}, 500);
 	});
+
+	// Плавный скролл якорных ссылок
+	// $(function () {
+	// $("a[href^='#']").click(function () {
+	// 	var _href = $(this).attr('href');
+	// 	$('html, body').animate({
+	// 			scrollTop: $(_href).offset().top + 'px',
+	// 		},
+	// 		1000
+	// 	);
+	// 	return false;
+	// });
+	// });
 
 	// Вызов/закрытие модального окна
 	var modalButton = $('[data-toggle=modal]');
