@@ -549,7 +549,7 @@ template {
   padding: 17px 0;
   margin-top: -1px;
   background-color: #344053;
-  transition: linear 0.3s;
+  transition: ease 0.5s;
   transform: translateY(-200%);
 }
 
@@ -1857,7 +1857,7 @@ template {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 105px;
+    padding-top: 122px;
   }
   .container, .container-big {
     max-width: 92%;
@@ -1920,6 +1920,9 @@ template {
 }
 
 @media (max-width: 576px) {
+  body {
+    padding-top: 105px;
+  }
   .header__logo-info {
     margin-left: 12px;
   }
