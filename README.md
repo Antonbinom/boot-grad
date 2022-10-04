@@ -24,4 +24,4 @@
 - Плагины JQuery
 - PHP Mailer
 
-## <a href="https://antonbinom.github.io/Library/dist/index.html">Ссылка</a>
+## <a href="https://antonbinom.github.io/boot-grad/">Ссылка</a>
